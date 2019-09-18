@@ -3,7 +3,7 @@ const express = require('express')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const weather = require('./utils/weathr')
-const PORT = 3000
+const port = process.env.PORT || 3000
 const app = express()
 
 const mapKey = "pk.eyJ1IjoicmVsZGF2aWQiLCJhIjoiY2swNmp3d2RlMHJ1MTNucGN1NG9jd2d2diJ9.Vz-KWuXmCeNC0PjQozcgTA"
@@ -93,8 +93,8 @@ app.get('*', (req,res) => {
     })
     // res.send('my 404 page')
 })
-app.listen(PORT, ()=>{
-    console.log(`server is runing ay port ${PORT}`)
+app.listen(port, ()=>{
+    console.log(`server is runing ay port ${port}`)
 })
 
 
