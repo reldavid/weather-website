@@ -10,12 +10,11 @@ const weather = (weatherKey, lat, lon, callback) => {
         callback(undefined, {
             temperature: res.body.currently.temperature,
             precipProbability: res.body.currently.precipProbability,
-            summery: res.body.daily.data[0].summary
+            summery: res.body.daily.data[0].summary,
+            tempHigh: res.body.daily.data[0].temperatureHigh,
+            tempLow: res.body.daily.data[0].temperatureLow,
         })
-    // const temperature = res.body.currently.temperature
-    // const precipProbability = res.body.currently.precipProbability
-    // const summery = res.body.daily.data[0].summary
-    // console.log(`${summery} It is currently ${temperature} degrees out. ther is a ${precipProbability} chance of rain.`)
+    // console.log(res.body.daily.data)
     }
 })
 

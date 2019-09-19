@@ -57,7 +57,8 @@ app.get('/weather', (req,response) => {
                   
                 response.send({
                     location: location,
-                    forcast: `${forecastdata.summery} It is currently ${forecastdata.temperature}c degrees out. there is a ${forecastdata.precipProbability} chance of rain.`
+                    forcast: `${forecastdata.summery} It is currently ${forecastdata.temperature}c degrees out. there is a ${forecastdata.precipProbability} chance of rain.
+                    the temperaturehigh for today is ${forecastdata.tempHigh} the temperatureLow for today is ${forecastdata.tempLow}`
                 })
         })
     })
@@ -102,16 +103,4 @@ app.listen(port, ()=>{
 
 
 
-           // console.log('location:', location)
-            // console.log(`${forecastdata.summery} It is currently ${forecastdata.temperature} degrees out.
-            // there is a ${forecastdata.precipProbability} chance of rain.`)
-
-    // const address = req.query.address
-    // geocode(mapKey, address, (err,{latitude,longitude,location}) => {
-    //     if (err) {return res.send({ERROR: 'Unable to get geo data'} )}
-
-    //     weather(weatherKey,latitude,longitude,(err,forecastdata) => {
-    //         if (err){return res.send({ERROR: 'Unable to get weather'})}
-    //         // console.log('location:', location)
-    //         // console.log(`${forecastdata.summery} It is currently ${forecastdata.temperature} degrees out.
-    //         // there is a ${forecastdata.precipProbability} chance of rain.`)
+ 

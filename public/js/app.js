@@ -1,4 +1,4 @@
-console.log('client side javascript file loaded')
+// console.log('client side javascript file loaded')
 
 
 const weatherForm = document.querySelector('form')
@@ -6,7 +6,7 @@ const search = document.querySelector('input')
 const msg1 = document.querySelector('#msg-1')
 const msg2 = document.querySelector('#msg-2')
 
-msg1.textContent = 'from javaScript'
+
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const location = search.value
@@ -17,12 +17,11 @@ weatherForm.addEventListener('submit', (e) => {
             
             if(data.err) {
                 msg1.textContent = (data.err)
-                console.log(data.err)
+                
             }else{
                 msg1.textContent = (data.location)
                 msg2.textContent = (data.forcast)
-                console.log(data.location)
-                console.log(data.forcast)
+              
             }
         })
     })
